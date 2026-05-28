@@ -1,3 +1,1 @@
-<div>
-    <!-- When there is no desire, all things are at peace. - Laozi -->
-</div>
+{{-- This will be the wrapping point of the dashboard! It will contain side bar links, header with search and the likes L-Shape--}}
