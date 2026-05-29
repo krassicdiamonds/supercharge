@@ -9,6 +9,9 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-white">
+    @auth
+    {{-- Only vissibled to auntheticated users --}}
+        
     {{-- This divs separates the side bar and main section --}}
     <div class="grid grid-cols-6">
 
@@ -149,5 +152,7 @@
             {{ $slot }}
         </main>
     </div>
+    
+    @endauth
 </body>
 </html>

@@ -9,6 +9,9 @@
 </head>
 <body class="bg-white">
     {{-- header --}}
+    @guest
+    {{-- Only vissible to un authenticated users --}}
+        
     <header class="top-0 sticky px-5 sm:px-10 md:px-20 lg:px-40 py-5">
         <div class="flex justify-between items-center">
             <a href="{{ route('welcome') }}" class="flex items-center gap-x-1">
@@ -36,5 +39,6 @@
     <footer class="px-5 sm:px-20 md:px-40">
         <h3 class="text-gray-500 text-xs text-center">&copy; Supercharge team</h3>
     </footer>
+    @endguest
 </body>
 </html>
