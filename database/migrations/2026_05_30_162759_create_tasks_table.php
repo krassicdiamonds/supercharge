@@ -20,6 +20,7 @@ return new class extends Migration
 
             // Eloquent relationships
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('priority_id')->constrained()->onDelete('cascade');
         });
     }
 
