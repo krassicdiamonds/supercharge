@@ -13,6 +13,6 @@ class PrioritySeeder extends Seeder
      */
     public function run(): void
     {
-        Priority::factory()->count(20)->create();
+        Priority::factory()->count(3)->create();
     }
 }

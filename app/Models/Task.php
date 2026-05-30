@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     /** @use HasFactory<\Database\Factories\TaskFactory> */
-    protected $fillable = ['title', 'description', 'due date', 'user_id', 'priority_id'];
+    protected $fillable = ['title', 'description', 'due date', 'user_id', 'priority_id', 'department_id'];
 
     use HasFactory;
 
@@ -22,5 +22,10 @@ class Task extends Model
     public function priority()
     {
         return $this->belongsTo(Priority::class);
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
     }
 }
