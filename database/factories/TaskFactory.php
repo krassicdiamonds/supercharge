@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,6 +22,9 @@ class TaskFactory extends Factory
             'title' => fake()->text(20),
             'description' => fake()->realTextBetween(10, 100),
             'due date' => fake()->dateTimeBetween('now', '+6 months'),
+            
+            // Eloquent relationships
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }

@@ -17,6 +17,9 @@ return new class extends Migration
             $table->text('description');
             $table->date('due date');
             $table->timestamps();
+
+            // Eloquent relationships
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 
