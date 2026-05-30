@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             PrioritySeeder::class,
+            DepartmentSeeder::class,
             TaskSeeder::class
             ]);
     }

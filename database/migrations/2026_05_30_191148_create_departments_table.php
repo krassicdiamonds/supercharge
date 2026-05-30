@@ -11,16 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->date('due date');
+            $table->string('department');
             $table->timestamps();
-
-            // Eloquent relationships
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('priority_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('departments');
     }
 };
