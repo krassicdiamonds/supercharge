@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Department;
 use App\Models\Priority;
+use App\Models\Status;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -31,7 +32,9 @@ class TaskFactory extends Factory
             // for the priority_id value, query the priority table in random order and get the first from that query list and get its id
             'priority_id' => Priority::inRandomOrder()->first()->id,
 
-            'department_id' => Department::inRandomOrder()->first()->id
+            'department_id' => Department::inRandomOrder()->first()->id,
+
+            'status_id' => Status::inRandomOrder()->first()->id,
         ];
     }
 }

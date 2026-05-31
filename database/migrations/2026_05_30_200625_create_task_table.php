@@ -24,6 +24,8 @@ return new class extends Migration
             $table->foreignId('priority_id')->constrained()->onDelete('cascade');
 
             $table->foreignId('department_id')->constrained()->onDelete('cascade');
+
+            $table->foreignId('status_id')->constrained()->onDelete('cascade');
   
         });
     }
